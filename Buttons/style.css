@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.basic-btn {
+  /*เรียนเกี่ยวกับการกำนดค่า box-shadow: inset X,Y,Blur-radius,Spread-radius*/
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+.a-btn {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1; /* ทำให้เป็นสี่เหลี่ยม */
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Fill in btn*/
+.basic-btn .fi-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+.fi-btn:hover {
+  color: #1E201E;
+  background-color: #ECDFCC;
+  border: 2px solid #1E201E;
+  box-shadow: inset 0 0 0 2em #ECDFCC; 
+  /* 
+  inset เพิ่มเงาภายในปุ่ม 
+  0 0 0 2em กำหนดว่าเงาไม่ขยายออกทางแกน X และ Y 
+  ไม่มีเบลอ, และขยายเงาภายในออกไปขนาด 2em (2 เท่าของขนาดตัวอักษร) 
+  */
+}
+
+/*Slide down btn*/
+.basic-btn .sd-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+.sd-btn:hover {
+  color: #1E201E;
+  background-color: #ECDFCC;
+  border: 2px solid #1E201E;
+  box-shadow: inset 0 3.5em 0 0  #ECDFCC; 
+  /* 
+  inset เพิ่มเงาภายในปุ่ม 3.5em 
+  หมายถึงเงาถูกเลื่อนลงมาจากด้านบนขององค์ประกอบโดยระยะเท่ากับ 3.5 เท่าของขนาดตัวอักษร (em)
+  */
+}
+
+/*Slide right btn*/
+.basic-btn .sr-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+.sr-btn:hover {
+  color: #1E201E;
+  background-color: #ECDFCC;
+  border: 2px solid #1E201E;
+  box-shadow: inset 5.5em 0 0 0  #ECDFCC;
+   /*
+    inset เพิ่มเงาภายในปุ่ม
+   หมายถึง จะมีเงาภายในเป็นแถบด้านซ้าย เลื่อนเข้ามา
+   */
+}
+
+/*Slide double btn*/
+.basic-btn .sdb-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.sdb-btn:hover {
+  color: #1E201E;
+  background-color: #ECDFCC;
+  border: 2px solid #1E201E;
+  box-shadow: inset -5em 0 0 0  #ECDFCC, inset 5em 0 0 0  #ECDFCC;
+ /*
+ -5em 0 0 0  เงาด้านซ้าย เริ่มต้นจากขอบซ้ายและเลื่อนเข้ามา  
+ 5em 0 0 0 เงาด้านขวา เริ่มต้นจากขอบขวาและเลื่อนเข้ามา
+  */
+}
