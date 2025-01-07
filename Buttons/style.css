@@ -137,3 +137,145 @@ body {
  5em 0 0 0 เงาด้านขวา เริ่มต้นจากขอบขวาและเลื่อนเข้ามา
   */
 }
+
+/*Slide Skew btn*/
+.basic-btn .ss-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.ss-btn::before {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    bottom: 0;
+    background: #ECDFCC;
+    height: 120%;
+    left: -10%;
+    transform: skewX(20deg);
+    z-index: -1;
+}
+.ss-btn:hover::before {
+  width: 120%;
+}
+.ss-btn:hover {
+  color: #1E201E;
+  border: 2px solid #1E201E;
+}
+
+/*Slide Skew Double btn*/
+.basic-btn .ssd-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.ssd-btn::before {
+  position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  bottom: 0;
+  background: #ECDFCC;
+  height: 120%;
+  left: -10%;
+  transform: skewX(20deg);
+  z-index: -1;
+}
+
+.ssd-btn:hover::before {
+  width: 62%;
+}
+
+.ssd-btn::after {
+  position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  right: 50%;
+  bottom: 0;
+  height: 4px;
+  background: #ECDFCC;
+}
+
+.ssd-btn::after {
+  height: 120%;
+  right: -10%;
+  transform: skewX(20deg);
+  z-index: -1;
+}
+.ssd-btn:hover::after {
+  width: 62%;
+}
+.ssd-btn:hover {
+  color: #1E201E;
+  border: 2px solid #1E201E;
+}
+
+
+/*Circle Fill btn*/
+.basic-btn .cf-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow:hidden; 
+  transition: .4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.cf-btn:before {
+  position: absolute;
+  transition: .3s;
+  content: '';
+  top: 50%;
+  background: #ECDFCC;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  left: 50%;
+  z-index: -1;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+.cf-btn:hover::before {
+    width: 11em;
+    height: 11em;
+}
+
+.cf-btn:hover {
+  color: #1E201E;
+  border: 2px solid #1E201E;
+}
