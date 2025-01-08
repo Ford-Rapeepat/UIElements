@@ -9,9 +9,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  gap: 16px;
+  gap: 10px;
 }
 
 .a-btn {
@@ -276,6 +277,94 @@ body {
 }
 
 .cf-btn:hover {
+  color: #1E201E;
+  border: 2px solid #1E201E;
+}
+
+/*COLLISIONC CIRCLCLES*/
+.basic-btn .cc-btn {
+  text-decoration: none;
+  color: #ECDFCC;
+  font-family: Curier, sans-serif;
+  font-size: 1rem;
+  background-color: #1E201E;
+  margin: 20px;
+  padding: 24px 30px;
+  border: 2px solid #ECDFCC;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.cc-btn::before,
+.cc-btn::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #ECDFCC;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+.cc-btn::before {
+  left: -20px;
+}
+
+.cc-btn::after {
+  right: -20px;
+}
+
+.cc-btn:hover::before {
+  animation: circle-left 0.7s forwards;
+}
+
+.cc-btn:hover::after {
+  animation: circle-right 0.7s forwards;
+}
+
+@keyframes circle-left {
+  0% {
+    left: -20px;
+    width: 20px;
+    height: 20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 40%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes circle-right {
+  0% {
+    right: -20px;
+    width: 20px;
+    height: 20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 40%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+.cc-btn:hover {
   color: #1E201E;
   border: 2px solid #1E201E;
 }
